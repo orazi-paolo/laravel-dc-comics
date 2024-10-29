@@ -1,3 +1,5 @@
+@vite('resources/scss/jumbotron.scss');
+
 <div id="jumbotron">
-    <img src="{{ asset('images/jumbotron.jpg')}}" alt="Jumbotron">
+    <img src="{{ asset('img/jumbotron.jpg')}}" alt="Jumbotron">
 </div>

@@ -1,0 +1,19 @@
+#footer {
+    li {
+        color: lightgray;
+
+        a {
+            &:hover {
+                color: #0582f9 !important;
+            }
+        }
+    }
+
+    span {
+        color: #0582f9;
+    }
+
+    h5 {
+        color: #0582f9;
+    }
+}

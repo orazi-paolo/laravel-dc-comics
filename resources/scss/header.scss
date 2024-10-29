@@ -1,0 +1,17 @@
+#header {
+    .bg-white>img {
+        height: 100px;
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+
+        a {
+            color: black;
+
+            &:hover {
+                color: #0582f9 !important;
+            }
+        }
+    }
+}

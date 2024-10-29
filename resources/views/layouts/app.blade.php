@@ -13,9 +13,6 @@
 
 <body>
 
-    {{-- includi header --}}
-    @include('partials.header')
-
     {{-- inserisci contenuti da chi estende --}}
     <main>
         @yield("main-content")

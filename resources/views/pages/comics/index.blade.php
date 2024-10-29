@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section("additional-cdn",)
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>
+@endsection
+
+{{-- includi header --}}
+@include('partials.header')
+
 {{-- includo jumbotron --}}
 @include('partials.jumbotron')
 
@@ -14,7 +21,7 @@
         <div class="row">
             @foreach ($comics as $id => $singleComic )
             <div class="col-2 mb-3">
-                <a href="{{ route('comic', $id)}}" class="text-decoration-none">
+                <a href="{{ route('comic.show', $id + 1  )}}" class="text-decoration-none">
                     <img src="{{ $singleComic['thumb']}}" alt="{{ $singleComic['title']}}"
                         class="img-fluid img-thumb mb-3 cursor_pointer">
                     <h6 class="text-white cursor_pointer">
@@ -32,13 +39,13 @@
     </section>
     <section class="quick-navigation bg-light-blue pt-5 pb-5 d-flex align-items-center justify-content-around">
         <div class="row container justify-content-between">
-            {{-- @foreach ($quickNavigation as $singleQuickNavigation ) --}}
+            @foreach ($quickNavigation as $singleQuickNavigation )
             <div class="col-2 d-flex cursor_pointer align-items-center">
-                {{-- <img src="{{ $singleQuickNavigation['image'] }}" alt="Images quick navigation" --}}
+                <img src="{{ $singleQuickNavigation['image'] }}" alt="Images quick navigation"
                     class="img-quick-navigation me-1">
-                {{-- <div class="fs-md text-white"> {{ $singleQuickNavigation['name'] }}</div> --}}
+                <div class="fs-md text-white"> {{ $singleQuickNavigation['name'] }}</div>
             </div>
-            {{-- @endforeach --}}
+            @endforeach
         </div>
     </section>
 </main>
