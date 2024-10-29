@@ -18,11 +18,13 @@
             </div>
             <div class="col-6">
                 <ul class="list-unstyled">
-                    @foreach ( $comic as $key => $value )
+                    @foreach ( $comic->getAttributes() as $key => $value )
+                    @if ( $key !== 'thumb' && $key !== 'id' && $key !== 'created_at' && $key !== 'updated_at' )
                     <li class="text-white mb-3">
                         <strong class="fs-3 text-danger">{{ strtoupper($key) }}:</strong> <br>
                         {{ $value }}
                     </li>
+                    @endif
                     @endforeach
                 </ul>
             </div>
