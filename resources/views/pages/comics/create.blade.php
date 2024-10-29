@@ -32,7 +32,7 @@
     </div>
     <div class="mb-3">
         <label for="sale_date" class="form-label">Sale date:</label>
-        <input type="text" name="sale_date" class="form-control" placeholder="Enter the sale date" required>
+        <input type="text" name="sale_date" class="form-control" placeholder="Enter the sale date example: 2000/01/01" required>
     </div>
     <div class="mb-3">
         <label for="type" class="form-label">Type:</label>

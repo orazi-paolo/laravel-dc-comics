@@ -31,9 +31,14 @@
             </div>
             @endforeach
             <div class="col-12 d-flex justify-content-center mb-3">
-                <button role="button" class="bg-light-blue text-white pt-1 pb-1 pe-3 ps-3">
+                <button role="button" class="bg-light-blue text-white pt-1 pb-1 pe-3 ps-3 me-3">
                     LOAD MORE
                 </button>
+                <a href="{{ route('comic.create') }}">
+                    <button role="button" class="bg-light-blue text-white pt-1 pb-1 pe-3 ps-3 me-3">
+                        ADD NEW COMIC
+                    </button>
+                </a>
             </div>
         </div>
     </section>
