@@ -34,6 +34,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger mt-2">Delete</button>
                     </form>
+                    <a href="{{route('comic.edit', $singleComic['id'])}}" class="btn btn-warning mt-2">Edit</a>
                 </div>
             </div>
             @endforeach
