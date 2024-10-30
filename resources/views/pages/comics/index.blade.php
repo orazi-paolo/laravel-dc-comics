@@ -32,7 +32,7 @@
                     <form action="{{ route('comic.delete', $singleComic['id']) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger mt-2 delete-button">Delete</button>
+                        <button type="submit" class="btn btn-danger mt-2 delete-button" data-comic-name="{{ $singleComic['title'] }}">Delete</button>
                     </form>
                     <a href="{{route('comic.edit', $singleComic['id'])}}" class="btn btn-warning mt-2">Edit</a>
                 </div>
