@@ -4,7 +4,7 @@
 
 @section('main-content')
 
-<h1 class="text-center mb-4">Aggiungi un Nuovo Fumetto</h1>
+<h1 class="text-center mb-4">Add a new comic</h1>
 <form action="{{ route('comic.store') }}" method="POST" class="container">
     @csrf
     <div class="mb-3">
