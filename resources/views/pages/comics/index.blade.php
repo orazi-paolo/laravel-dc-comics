@@ -22,7 +22,7 @@
             @foreach ($comics as $id => $singleComic )
             <div class="col-2 mb-3">
                 <div>
-                    <a href="{{ route('comic.show', $id + 1  )}}" class="text-decoration-none">
+                    <a href="{{ route('comic.show', $singleComic['id']  )}}" class="text-decoration-none">
                         <img src="{{ $singleComic['thumb']}}" alt="{{ $singleComic['title']}}"
                             class="img-fluid img-thumb mb-3 cursor_pointer">
                         <h6 class="text-white cursor_pointer">
