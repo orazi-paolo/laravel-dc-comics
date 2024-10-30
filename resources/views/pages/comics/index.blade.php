@@ -21,13 +21,20 @@
         <div class="row">
             @foreach ($comics as $id => $singleComic )
             <div class="col-2 mb-3">
-                <a href="{{ route('comic.show', $id + 1  )}}" class="text-decoration-none">
-                    <img src="{{ $singleComic['thumb']}}" alt="{{ $singleComic['title']}}"
-                        class="img-fluid img-thumb mb-3 cursor_pointer">
-                    <h6 class="text-white cursor_pointer">
-                        {{ strtoupper($singleComic['series'])}}
-                    </h6>
-                </a>
+                <div>
+                    <a href="{{ route('comic.show', $id + 1  )}}" class="text-decoration-none">
+                        <img src="{{ $singleComic['thumb']}}" alt="{{ $singleComic['title']}}"
+                            class="img-fluid img-thumb mb-3 cursor_pointer">
+                        <h6 class="text-white cursor_pointer">
+                            {{ strtoupper($singleComic['series'])}}
+                        </h6>
+                    </a>
+                    <form action="{{ route('comic.delete', $singleComic['id']) }}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                    </form>
+                </div>
             </div>
             @endforeach
             <div class="col-12 d-flex justify-content-center mb-3">
