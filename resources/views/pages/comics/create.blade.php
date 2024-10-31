@@ -7,6 +7,16 @@
 <h1 class="text-center mb-4">Add a new comic</h1>
 <form action="{{ route('comic.store') }}" method="POST" class="container">
     @csrf
+    @if ($errors->any())
+        <div class="alert alert-warning">
+            <h4>These errors occurred</h4>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="mb-3">
         <label for="title" class="form-label">Title:</label>
         <input type="text" name="title" class="form-control" placeholder="Enter the title" required>
